@@ -1,0 +1,20 @@
+Default: &defaults
+  database: StudHelper.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: StudHelper_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: StudHelper_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: StudHelper_production.sqlite3
+  poolsize: 100
+  <<: *defaults
